@@ -189,9 +189,16 @@ footer{padding:64px 0 30px;background:#3a2a21;color:#e8dcd0}
 .foot-links{list-style:none}
 .credit{border-top:1px solid rgba(232,220,208,.12);padding-top:26px;text-align:center;color:#c9b6a6;font-size:.85rem}
 .credit b{color:var(--terra2);font-weight:600}
+/* ---------- BOUTONS FLOTTANTS ---------- */
 .wa-float{position:fixed;bottom:26px;right:26px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;z-index:150;box-shadow:0 12px 30px rgba(0,0,0,.25);animation:waPulse 2.6s 1.2s infinite;transition:transform .3s}
 .wa-float:hover{transform:scale(1.12)}
 @keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 22px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.top-btn{position:fixed;bottom:96px;right:26px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--terra),var(--terra2));color:#fff;border:none;cursor:pointer;z-index:150;display:grid;place-items:center;box-shadow:0 10px 25px rgba(192,90,58,.4);opacity:0;pointer-events:none;transform:translateY(20px) scale(.8);transition:opacity .4s,transform .4s,background .3s}
+.top-btn.show{opacity:1;pointer-events:auto;transform:translateY(0) scale(1)}
+.top-btn:hover{transform:translateY(-4px);box-shadow:0 15px 30px rgba(192,90,58,.5)}
+.top-btn svg{transition:transform .3s}
+.top-btn:hover svg{transform:translateY(-2px)}
+@keyframes waPulse2{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 22px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 /* responsive */
 @media(max-width:960px){
   .hero-inner,.about-grid,.loc-grid{grid-template-columns:1fr}
@@ -246,7 +253,7 @@ footer{padding:64px 0 30px;background:#3a2a21;color:#e8dcd0}
       <h1>Un séjour <span class="terra">d'exception</span><br>à Yaoundé</h1>
       <p class="tagline">Appartements &amp; studios meublés haut standing à Ngousso, Entrée Fabrique sur l'axe de l'Hôpital Général. Confort moderne, sécurité 24h/24 et internet fibre — pour courts comme longs séjours.</p>
       <div class="hero-actions">
-        <a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20appartement%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE" target="_blank" class="btn btn-terra">💬 Réserver sur WhatsApp</a>
+        <a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20appartement%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE%20pour%20un%20s%C3%A9jour%20(merci%20de%20m'indiquer%20vos%20disponibilit%C3%A9s%20et%20tarifs)." target="_blank" class="btn btn-terra">💬 Réserver sur WhatsApp</a>
         <a href="#tarifs" class="btn btn-ghost">Voir les tarifs</a>
       </div>
       <div class="hero-stats">
@@ -389,21 +396,21 @@ footer{padding:64px 0 30px;background:#3a2a21;color:#e8dcd0}
         <div class="amount">35 000</div>
         <div class="per">FCFA / nuit</div>
         <p class="price-desc">Séjour court, tout inclus. Idéal pour une nuit ou un week-end.</p>
-        <a href="https://wa.me/237654037054" target="_blank" class="btn btn-ghost" style="padding:12px 24px">Réserver</a>
+        <a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20appartement%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE%20pour%201%20jour%20au%20tarif%20de%2035%20000%20FCFA%2Fnuit." target="_blank" class="btn btn-ghost" style="padding:12px 24px">Réserver</a>
       </div>
       <div class="price-card reveal d2">
         <div class="dur">7 jours</div>
         <div class="amount">30 000</div>
         <div class="per">FCFA / nuit</div>
         <p class="price-desc">Une semaine complète avec un tarif réduit sur chaque nuitée.</p>
-        <a href="https://wa.me/237654037054" target="_blank" class="btn btn-ghost" style="padding:12px 24px">Réserver</a>
+        <a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20appartement%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE%20pour%207%20jours%20au%20tarif%20de%2030%20000%20FCFA%2Fnuit." target="_blank" class="btn btn-ghost" style="padding:12px 24px">Réserver</a>
       </div>
       <div class="price-card reveal d3">
         <div class="dur">20 jours</div>
         <div class="amount">25 000</div>
         <div class="per">FCFA / nuit</div>
         <p class="price-desc">Parfait pour les missions et formations de plusieurs semaines.</p>
-        <a href="https://wa.me/237654037054" target="_blank" class="btn btn-ghost" style="padding:12px 24px">Réserver</a>
+        <a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20appartement%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE%20pour%2020%20jours%20au%20tarif%20de%2025%20000%20FCFA%2Fnuit." target="_blank" class="btn btn-ghost" style="padding:12px 24px">Réserver</a>
       </div>
       <div class="price-card featured reveal d4">
         <div class="ribbon">Meilleur prix</div>
@@ -412,7 +419,7 @@ footer{padding:64px 0 30px;background:#3a2a21;color:#e8dcd0}
         <div class="per">FCFA / nuit</div>
         <span class="save">Économisez jusqu'à 43 %</span>
         <p class="price-desc">Le tarif longue durée : votre home away from home à Yaoundé.</p>
-        <a href="https://wa.me/237654037054" target="_blank" class="btn btn-terra" style="padding:12px 24px">Réserver</a>
+        <a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20appartement%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE%20pour%2021%20jours%20ou%20plus%20au%20tarif%20de%2020%20000%20FCFA%2Fnuit." target="_blank" class="btn btn-terra" style="padding:12px 24px">Réserver</a>
       </div>
     </div>
   </div>
@@ -464,7 +471,7 @@ footer{padding:64px 0 30px;background:#3a2a21;color:#e8dcd0}
     <p class="reveal d1">Contactez-nous directement par téléphone ou WhatsApp — disponibilités en temps réel, tarifs confirmés, visite possible sur rendez-vous.</p>
     <div class="cta-actions reveal d2">
       <a href="tel:+237654037054" class="btn btn-light">📞 +237 654 037 054</a>
-      <a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE" target="_blank" class="btn btn-outline">💬 Écrire sur WhatsApp</a>
+      <a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20appartement%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE%20pour%20un%20s%C3%A9jour%20(merci%20de%20m'indiquer%20vos%20disponibilit%C3%A9s%20et%20tarifs)." target="_blank" class="btn btn-outline">💬 Écrire sur WhatsApp</a>
     </div>
   </div>
 </section>
@@ -490,7 +497,7 @@ footer{padding:64px 0 30px;background:#3a2a21;color:#e8dcd0}
       <div>
         <h4>Contact</h4>
         <a href="tel:+237654037054">📞 +237 654 037 054</a><br>
-        <a href="https://wa.me/237654037054" target="_blank">💬 WhatsApp</a><br>
+        <a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20appartement%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE%20pour%20un%20s%C3%A9jour%20(merci%20de%20m'indiquer%20vos%20disponibilit%C3%A9s%20et%20tarifs)." target="_blank">💬 WhatsApp</a><br>
         <p>📍 Ngousso, Entrée Fabrique<br>Axe Hôpital Général, Yaoundé</p>
       </div>
     </div>
@@ -498,17 +505,27 @@ footer{padding:64px 0 30px;background:#3a2a21;color:#e8dcd0}
   </div>
 </footer>
 
-<a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE" target="_blank" class="wa-float" aria-label="WhatsApp">
+<!-- BOUTONS FLOTTANTS -->
+<a href="https://wa.me/237654037054?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20appartement%20%C3%A0%20ELVIRA%20PLAZA%20RESIDENCE%20pour%20un%20s%C3%A9jour%20(merci%20de%20m'indiquer%20vos%20disponibilit%C3%A9s%20et%20tarifs)." target="_blank" class="wa-float" aria-label="WhatsApp">
   <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4 5.3 5.3 0 0 0 3.2.6 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>
 </a>
+<button class="top-btn" id="topBtn" aria-label="Retour en haut de page" title="Retour en haut">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 
 <script>
 (function(){
   "use strict";
   document.getElementById("year").textContent = new Date().getFullYear();
   var nav = document.getElementById("nav");
+  var topBtn = document.getElementById("topBtn");
   window.addEventListener("scroll", function(){
-    if (window.scrollY > 60) nav.classList.add("scrolled"); else nav.classList.remove("scrolled");
+    var y = window.scrollY;
+    if (y > 60) nav.classList.add("scrolled"); else nav.classList.remove("scrolled");
+    if (y > 600) topBtn.classList.add("show"); else topBtn.classList.remove("show");
+  });
+  topBtn.addEventListener("click", function(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
   var links = document.getElementById("navLinks");
   document.getElementById("burger").addEventListener("click", function(){ links.classList.toggle("open"); });
