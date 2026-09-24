@@ -1,0 +1,51 @@
+/* Recadrage des photos ELVIRA PLAZA RESIDENCE */
+/* Les images remplissent leur cadre : les bandes noires haut/bas sont ainsi masquées. */
+.hero-card .frame,
+.celld .frame,
+.apt-card .thumb,
+.gal-item .frame {
+  overflow: hidden;
+  background: #eed3ba;
+}
+
+.hero-card img,
+.celld img,
+.apt-card .thumb img,
+.gal-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Cadrages adaptés aux contenus des photos */
+.hero-card img { object-position: center 52%; }
+.celld:nth-child(1) img { object-position: center 48%; }
+.celld:nth-child(2) img { object-position: center 42%; }
+.celld:nth-child(3) img { object-position: center 50%; }
+.apt-card:nth-child(1) img { object-position: center 48%; }
+.apt-card:nth-child(2) img { object-position: center 50%; }
+.apt-card:nth-child(3) img { object-position: center 50%; }
+.apt-card:nth-child(4) img { object-position: center 48%; }
+.gal-item:nth-child(1) img { object-position: center 50%; }
+.gal-item:nth-child(2) img { object-position: center 42%; }
+.gal-item:nth-child(3) img { object-position: center 48%; }
+.gal-item:nth-child(4) img { object-position: center 50%; }
+.gal-item:nth-child(5) img { object-position: center 48%; }
+
+/* Même recadrage dans la fenêtre agrandie */
+.lightbox { padding: 5vh 5vw; }
+.lightbox img {
+  width: min(90vw, 1100px);
+  height: min(82vh, 740px);
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (max-width: 600px) {
+  .lightbox img {
+    width: 94vw;
+    height: 70vh;
+  }
+}
